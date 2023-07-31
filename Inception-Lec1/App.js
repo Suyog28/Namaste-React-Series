@@ -1,3 +1,12 @@
+
+//Javascript Code
+
+
+// const heading = document.createElement("h1");
+// heading.innerHTML = "React Comming from Javascript";
+// const root1 = document.getElementById("root");
+// root1.appendChild(heading);
+
 const parent = React.createElement("div", { id: "parent" },
     [React.createElement("div", { id: "child" },
         [React.createElement("h1", {}, "This h1 from parent"),
@@ -15,3 +24,5 @@ const parent = React.createElement("div", { id: "parent" },
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(parent);
+
+
