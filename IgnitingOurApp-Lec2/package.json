@@ -1,0 +1,25 @@
+{
+  "name": "ignitingourapp-lec2",
+  "version": "1.0.0",
+  "description": "Episode 2",
+  "main": "App.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Suyog28/Namaste-React-Series.git#main"
+  },
+  "keywords": [
+    "react"
+  ],
+  "author": "Suyog Muley",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Suyog28/Namaste-React-Series/issues"
+  },
+  "homepage": "https://github.com/Suyog28/Namaste-React-Series/tree/main#readme",
+  "devDependencies": {
+    "parcel": "^2.9.3"
+  }
+}
