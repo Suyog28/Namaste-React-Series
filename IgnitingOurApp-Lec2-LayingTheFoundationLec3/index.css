@@ -1,3 +1,68 @@
-.container {
-  color: chocolate;
+body {
+  box-sizing: border-box;
+  margin: 0 auto;
+}
+
+.body-container {
+  width: 1400px;
+  box-sizing: border-box;
+  margin: 0 auto;
+}
+
+.search {
+  text-align: center;
+  font-size: 25px;
+}
+
+.searchinput {
+  font-size: 25px;
+}
+
+.logomain {
+  width: 150px;
+  padding: 8px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 60px;
+  align-items: center;
+  background-color: darkcyan;
+  font-size: 24px;
+}
+
+.nav-items > ul {
+  display: flex;
+  gap: 20px;
+  font-family: "Courier New", Courier, monospace;
+  font-weight: 500;
+}
+
+.nav-items > ul > li {
+  list-style-type: none;
+}
+
+.search {
+  padding: 20px;
+}
+
+.cardlogo {
+  width: 250px;
+}
+.res-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+.ResCard {
+  padding: 10px;
+  background-color: rgba(220, 233, 228, 0.994);
+  width: 250px;
+}
+
+.ResCard:hover {
+  border: 1px solid black;
+  cursor: pointer;
+  box-shadow: black;
 }
