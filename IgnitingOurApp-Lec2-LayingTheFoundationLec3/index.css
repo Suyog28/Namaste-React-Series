@@ -28,7 +28,7 @@ body {
   justify-content: space-between;
   padding: 0 60px;
   align-items: center;
-  background-color: darkcyan;
+  background-color: #eafcfc;
   font-size: 24px;
 }
 
@@ -57,7 +57,7 @@ body {
 }
 .ResCard {
   padding: 10px;
-  background-color: rgba(220, 233, 228, 0.994);
+  background-color: #ffffff;
   width: 250px;
 }
 
