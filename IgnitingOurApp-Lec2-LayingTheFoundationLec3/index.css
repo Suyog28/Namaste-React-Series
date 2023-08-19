@@ -59,10 +59,25 @@ body {
   padding: 10px;
   background-color: #ffffff;
   width: 250px;
+  box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
 }
 
 .ResCard:hover {
   border: 1px solid black;
   cursor: pointer;
-  box-shadow: black;
+  box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+}
+
+.filter-btn {
+  padding: 20px;
+  text-align: right;
+}
+
+.top-btn {
+  padding: 15px;
+  background-color: rgb(205, 246, 229);
+  font-size: 20px;
+  font-weight: 500;
+  border-radius: 8px;
+  border: 0px;
 }
