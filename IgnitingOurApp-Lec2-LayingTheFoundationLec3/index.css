@@ -81,3 +81,13 @@ body {
   border-radius: 8px;
   border: 0px;
 }
+
+.search-btn {
+  padding: 8px;
+  font-size: 20px;
+  background-color: rgb(205, 246, 229);
+  font-weight: 500;
+  font-weight: 500;
+  border: 0px;
+  margin: 2px;
+}

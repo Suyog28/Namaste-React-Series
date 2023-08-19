@@ -22,8 +22,22 @@
   },
   "homepage": "https://github.com/Suyog28/Namaste-React-Series/tree/main#readme",
   "devDependencies": {
+    "assert": "^2.0.0",
+    "browserify-zlib": "^0.2.0",
+    "buffer": "^6.0.3",
+    "crypto-browserify": "^3.12.0",
+    "events": "^3.3.0",
+    "https-browserify": "^1.0.0",
+    "os-browserify": "^0.3.0",
     "parcel": "^2.9.3",
-    "process": "^0.11.10"
+    "path-browserify": "^1.0.1",
+    "process": "^0.11.10",
+    "querystring-es3": "^0.2.1",
+    "stream-browserify": "^3.0.0",
+    "stream-http": "^3.2.0",
+    "tty-browserify": "^0.0.1",
+    "url": "^0.11.1",
+    "util": "^0.12.5"
   },
   "browserlist": "last 2 version",
   "dependencies": {
