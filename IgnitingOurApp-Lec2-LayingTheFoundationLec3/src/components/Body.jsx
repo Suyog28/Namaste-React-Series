@@ -7,6 +7,7 @@ const Body = () => {
 
     const [listOfRest, setlistOfRest] = useState([]);
     const [searchInput, setSearchInput] = useState("")
+    const [filterRestData, setFilterRestData] = useState([]);
 
     useEffect(() => {
         fetchData();
@@ -17,6 +18,7 @@ const Body = () => {
         const json = await data.json();
         console.log(json);
         setlistOfRest(json?.data?.success?.cards[0]?.favourite?.cards);
+        setFilterRestData(json?.data?.success?.cards[0]?.favourite?.cards);
     }
 
 
@@ -33,8 +35,9 @@ const Body = () => {
                 <button className='search-btn'
                     onClick={() => {
                         const searchData = listOfRest.filter(
-                            (res) => res.data.name.toLocaleLowerCase().includes(searchInput));
-                        setlistOfRest(searchData);
+                            (res) => res.data.name.toLocaleLowerCase().includes(searchInput.toLocaleLowerCase()));
+                        // setlistOfRest(searchData);//Using this we can able to filter data only
+                        setFilterRestData(searchData)
                     }}
                 >Search</button>
             </div>
@@ -42,12 +45,12 @@ const Body = () => {
                 <button className='top-btn'
                     onClick={() => {
                         const filterData = listOfRest.filter((res) => res.data.avgRating > 4);
-                        setlistOfRest(filterData);
+                        setFilterRestData(filterData);
                     }}>Top Rating</button>
             </div>
             <div className='res-container'>
                 {
-                    listOfRest.map((resitems) => <ResCard resData={resitems} key={resitems.data.id} />)
+                    filterRestData.map((resitems) => <ResCard resData={resitems} key={resitems.data.id} />)
                 }
             </div>
         </div>
