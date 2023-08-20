@@ -3,7 +3,7 @@ import { CARD_IMAGE_CDN_URL } from "../utils/constants"
 //Props Passing using destructuring
 const ResCard = (props) => {
     const { resData } = props;
-    const { cloudinaryImageId, name, cuisines, avgRating } = resData.info;
+    const { cloudinaryImageId, name, cuisines, avgRating } = resData.data;
     return (
         <div className='ResCard'>
             <img className="cardlogo" src={CARD_IMAGE_CDN_URL + cloudinaryImageId} alt='cardLogo' />

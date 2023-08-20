@@ -91,3 +91,20 @@ body {
   border: 0px;
   margin: 2px;
 }
+
+.shimmer-Container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  width: 1400px;
+  box-sizing: border-box;
+  margin: 60px auto;
+}
+
+.shimmer-card {
+  padding: 10px;
+  background-color: #ffffff;
+  width: 250px;
+  height: 450px;
+  box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+}

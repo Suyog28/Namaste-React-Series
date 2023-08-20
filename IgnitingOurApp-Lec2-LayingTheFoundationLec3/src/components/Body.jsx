@@ -1,13 +1,26 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import ResCard from '../components/ResCard';
-import resList from '../utils/mockData';
+// import resList from '../utils/mockData';
+import Shimmer from './Shimmer';
 
 const Body = () => {
 
-    const [listOfRest, setlistOfRest] = useState(resList);
+    const [listOfRest, setlistOfRest] = useState([]);
     const [searchInput, setSearchInput] = useState("")
 
-    return (
+    useEffect(() => {
+        fetchData();
+    }, []);
+
+    const fetchData = async () => {
+        const data = await fetch("https://www.swiggy.com/dapi/homepage/getCards?lat=18.6101365&lng=73.7746293&page_type=DESKTOP_WEB_LISTING");
+        const json = await data.json();
+        console.log(json);
+        setlistOfRest(json?.data?.success?.cards[0]?.favourite?.cards);
+    }
+
+
+    return listOfRest.length === 0 ? <Shimmer /> : (
         <div className='body-container' >
             <div className='search'>
                 <input type='text' name='search'
@@ -19,7 +32,8 @@ const Body = () => {
                 />
                 <button className='search-btn'
                     onClick={() => {
-                        const searchData = listOfRest.filter((res) => res.info.name.includes(searchInput));
+                        const searchData = listOfRest.filter(
+                            (res) => res.data.name.toLocaleLowerCase().includes(searchInput));
                         setlistOfRest(searchData);
                     }}
                 >Search</button>
@@ -27,13 +41,13 @@ const Body = () => {
             <div className='filter-btn'>
                 <button className='top-btn'
                     onClick={() => {
-                        const filterData = listOfRest.filter((res) => res.info.avgRating > 4);
+                        const filterData = listOfRest.filter((res) => res.data.avgRating > 4);
                         setlistOfRest(filterData);
                     }}>Top Rating</button>
             </div>
             <div className='res-container'>
                 {
-                    listOfRest.map((resitems) => <ResCard resData={resitems} key={resitems.info.id} />)
+                    listOfRest.map((resitems) => <ResCard resData={resitems} key={resitems.data.id} />)
                 }
             </div>
         </div>
