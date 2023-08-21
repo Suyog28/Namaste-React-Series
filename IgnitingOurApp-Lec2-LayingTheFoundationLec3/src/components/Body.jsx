@@ -3,6 +3,7 @@ import ResCard from '../components/ResCard';
 // import resList from '../utils/mockData';
 import Shimmer from './Shimmer';
 
+
 const Body = () => {
 
     const [listOfRest, setlistOfRest] = useState([]);
@@ -16,7 +17,7 @@ const Body = () => {
     const fetchData = async () => {
         const data = await fetch("https://www.swiggy.com/dapi/homepage/getCards?lat=18.6101365&lng=73.7746293&page_type=DESKTOP_WEB_LISTING");
         const json = await data.json();
-        console.log(json);
+        //   console.log(json);
         setlistOfRest(json?.data?.success?.cards[0]?.favourite?.cards);
         setFilterRestData(json?.data?.success?.cards[0]?.favourite?.cards);
     }

@@ -49,6 +49,7 @@ body {
 
 .cardlogo {
   width: 250px;
+  height: 250px;
 }
 .res-container {
   display: flex;
