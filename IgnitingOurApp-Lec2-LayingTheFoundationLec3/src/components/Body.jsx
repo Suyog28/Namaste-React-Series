@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import ResCard from '../components/ResCard';
 // import resList from '../utils/mockData';
 import Shimmer from './Shimmer';
+import { Link } from 'react-router-dom';
 
 
 const Body = () => {
@@ -51,7 +52,8 @@ const Body = () => {
             </div>
             <div className='res-container'>
                 {
-                    filterRestData.map((resitems) => <ResCard resData={resitems} key={resitems.data.id} />)
+                    filterRestData.map((resitems) =>
+                        <Link key={resitems.data.id} to={"/ResMenu/" + resitems.data.id}> <ResCard resData={resitems} /></Link>)
                 }
             </div>
         </div>
