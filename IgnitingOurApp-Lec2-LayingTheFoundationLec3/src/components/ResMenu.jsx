@@ -53,7 +53,7 @@ const ResMenu = () => {
             </div>
             <div className='time'>
                 <h3><BiTimeFive className='star' />  {sla.deliveryTime} Min</h3>
-                <h3><FaRupeeSign className='star' /> {costForTwoMessage}</h3>
+                <h3> {costForTwoMessage}</h3>
             </div>
             <div className='cuisines-Name' >
                 <div className='items-name'>

@@ -55,7 +55,7 @@ import ResMenu from './components/ResMenu';
 //             <h3> {resname}</h3>
 //             <h4>{cusine}</h4>
 //             <h5>4.0 Star</h5>
-//         </div>
+//         </div>//
 //     )
 // }
 
