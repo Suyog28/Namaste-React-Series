@@ -12,7 +12,7 @@ import ResMenu from './components/ResMenu';
 
 //JSX => React.createElement => ReactElement-JS Object => HTMLElement(render)
 
-//React Element
+//React Element 
 
 // const headingelement = <h1>Hello Element in react</h1>;
 
