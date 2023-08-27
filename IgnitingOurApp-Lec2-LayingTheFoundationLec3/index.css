@@ -150,3 +150,7 @@ body {
   display: flex;
   justify-content: space-between;
 }
+
+.userCard {
+  border: 2px solid #f0f0f0;
+}
